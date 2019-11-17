@@ -7,8 +7,9 @@ import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@EnableEurekaClient
-@EnableZuulProxy
+@EnableEurekaClient//表示注册到eureka
+@EnableZuulProxy//表示是zuul
+
 public class Zuul9527Application {
     public static void main(String[] args) {
         SpringApplication.run(Zuul9527Application.class,args);

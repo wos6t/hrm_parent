@@ -1,13 +1,14 @@
 spring:
   application:
-    name: hrm-eureka
+    name: hrm-eureka #给应用起个名字
 server:
   port: 7001
 eureka:
   instance:
     hostname: localhost
   client:
-    registerWithEureka: false
-    fetchRegistry: false
-    serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/ #单机配置
+    registerWithEureka: false  #不注册到Eureka
+    fetchRegistry: false #不从注册中心获取服务
+    serviceUrl: #
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      #单机配置==localhost:7001   服务的默认url地址
